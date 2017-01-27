@@ -17,7 +17,7 @@ image_to_quay:
     - DOCKER_HOST=tcp://127.0.0.1:2375
   commands:
     - docker login -u="sim_barnes" -p=${DOCKER_PASSWORD} quay.io
-    - docker tag docker:1.11 quay.io/ukhomeofficedigital/<node-hello-world>:${DRONE_COMMIT_SHA}
+    - docker tag docker:1.11 quay.io/ukhomeofficedigital/simonb_test:${DRONE_COMMIT_SHA}
     - docker push quay.io/ukhomeofficedigital/<node-hello-world>:${DRONE_COMMIT_SHA}
   when:
     branch: master
